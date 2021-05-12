@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			centerSlides: false,
 			simulateTouch: false,
 			navigation: {
-				nextEl: '.decision__button-next',
-				prevEl: '.decision__button-prev',
+				nextEl: '.table__button-next',
+				prevEl: '.table__button-prev',
 			},
 			breakpoints: {
 				479: {
@@ -38,5 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	getMedia();
 	//end slider Swiper////////////////////
+
+	const getTextBodyHeight = document.querySelectorAll('.table__item-body');
+	const getTextItem = document.querySelectorAll('.table__item');
+
+	getTextBodyHeight.forEach(item => {
+		if (item.scrollHeight >= 100) {
+			item.parentElement.classList.add('table__item--arrow');
+		} else if (item.scrollHeight < 100) {
+			item.parentElement.classList.remove('table__item--arrow');
+		}
+		console.log(item.scrollHeight);
+	});
 
 });
