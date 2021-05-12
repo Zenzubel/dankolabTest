@@ -5,8 +5,12 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	color: #000;
-	// line-height: 27 / 18 * 100%;
+	color: #fff;
+	font-size: 16px;
+	line-height: 22 / 16 * 100%;
+	@media (max-width: 1170px) {
+		font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1170 - 320)));
+	};
 	&.lock {
 		overflow-x: hidden;
 	}
