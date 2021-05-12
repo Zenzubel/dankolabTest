@@ -2,45 +2,14 @@
 @import "_libs.scss";
 @import "_fonts.scss";
 
-html {
-	scroll-behavior: smooth;
-}
 
 body {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #000;
 	// line-height: 27 / 18 * 100%;
 	&.lock {
 		overflow-x: hidden;
 	}
-}
-
-.wrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	transition-duration: 1s;
-	&.displacement {
-		margin-right: 0;
-		margin-left: -260px;
-		transition-duration: 1s;
-		overflow: visible;
-		@media (max-width: 319px) {
-			margin-left: -230px;
-		};
-	}
-}
-
-.content {
-	flex: 1 0 auto;
-	margin-right: 0;
-}
-
-.footer {
-	flex: 0 0 auto;
 }
 
 .container {
