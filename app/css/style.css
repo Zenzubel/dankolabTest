@@ -145,7 +145,6 @@ body {
   z-index: 5;
   max-height: 100px;
   height: 100%;
-  overflow: -moz-scrollbars-none;
   overflow: auto;
 }
 
