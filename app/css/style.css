@@ -98,6 +98,8 @@ p {
   font-display: swap;
 }
 
+html {overflow: -moz-scrollbars-none;}
+
 body {
   overflow: -moz-scrollbars-none;
 
