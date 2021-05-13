@@ -145,8 +145,8 @@ body {
   z-index: 5;
   max-height: 100px;
   height: 100%;
-  scrollbar-width: none;
   overflow: auto;
+  scrollbar-width: none;
 }
 
 .table__item-body--center {
