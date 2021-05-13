@@ -1,7 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
 
-	//start slider Swiper////////////////////
+	//start slider Swiper//
 	function swiperInit() {
 			let mySwiper = new Swiper ('.table__swiper-wrap', {
 			containerModifierClass: 'table__swiper-wrap', 
@@ -30,25 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function getMedia() {
-		const mediaQuery = window.matchMedia('(max-width: 768px)');
+		const mediaQuery = window.matchMedia('(max-width: 767px)');
+
 		if (mediaQuery.matches) {
 			swiperInit();
-			console.log('asdasd');
 		}
 	}
 	getMedia();
-	//end slider Swiper////////////////////
-
+	//end slider Swiper//
+	//start get client height in text block//
 	const getTextBodyHeight = document.querySelectorAll('.table__item-body');
-	const getTextItem = document.querySelectorAll('.table__item');
 
 	getTextBodyHeight.forEach(item => {
+
 		if (item.scrollHeight >= 100) {
 			item.parentElement.classList.add('table__item--arrow');
-		} else if (item.scrollHeight < 100) {
+		}
+		else if (item.scrollHeight < 100) {
 			item.parentElement.classList.remove('table__item--arrow');
 		}
-		console.log(item.scrollHeight);
 	});
-
+	//end get client height in text block//
 });
